@@ -1,0 +1,394 @@
+<%- include ("includes/header") %>
+<html>
+
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+<section>
+	<div class="gap gray-bg">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="row" id="page-contents">
+						<div class="col-md-9">
+							<div id="add-post-box"></div>
+								<div class="central-meta item">
+									<div class="new-postbox">
+										<figure>
+											<img src="image.jpg" style="width: 70px"> 
+										</figure>
+										<div class="newpst-input">
+											<form method="post" id="form-add-post" onsubmit="return doPost(this)">
+
+												 <input name="type" type="hidden" value="post">
+												 <textarea rows="2" name="caption" placeholder="write something"></textarea>
+												<div class="attachments">
+										 <ul>
+
+											 <li>
+												 <img id="post-img-preview" style="display: none">
+											 </li>
+
+											 <li>
+												 <video id="post-video-preview" controls style="display: none"></video>
+											 </li>
+
+											 <li>
+												 <i class="fa fa-image"></i>
+												 <label class="fileContainer">
+													 <input type="file" name="image" accept="image/*" onchange="previewPostImage(this)">
+												 </label>
+											 </li>
+
+											 <li>
+												 <button type="submit">Post</button>
+											 </li>
+
+										 </ul>
+									 </div>
+											</form>
+										</div>
+									</div>
+								</div>
+								<div class="loadMore" id="newsfeed">
+								<div class="central-meta item">
+						<div class="user-post">
+							<div class="friend-info" >
+								<figure>
+									<img src="image.jpg" style="width: 45px" > 
+								</figure>
+								
+								<i class="fa fa-edit hello" style="font-size:24px" ></i>
+					
+								<i class="fa fa-trash hello1" style="font-size:24px"></i>
+								
+								<div class="friend-name">
+								
+									<span>Published: </span>
+								</div>
+
+								<div class="post-meta">
+
+									<div class="description">
+										<p>
+											asfsafasfas
+										</p>
+									</div>						
+										<img src="image.jpg">							
+								</div>
+							</div>	
+					
+									
+									<div class="post-comt-box">
+									<div class="comet-avatar">
+										<img src="image.jpg" style="width: 45px;"> 
+									</div>
+										<form method="post" onsubmit="return doPostComment(this)">
+											<input type="hidden" name="_id" value=" + data._id + ">
+											<textarea name="comment" placeholder="Post your comment"></textarea>
+											<button type="submit">Post</button>
+										</form>
+									</div>		
+				
+							</div>
+								
+							</div>
+							</div>
+                     <div class="loadMore" id="newsfeed">
+								<div class="central-meta item">
+						<div class="user-post">
+							<div class="friend-info" >
+								<figure>
+									<img src="image.jpg" style="width: 45px" > 
+								</figure>
+								
+								<i class="fa fa-edit hello" style="font-size:24px" ></i>
+					
+								<i class="fa fa-trash hello1" style="font-size:24px"></i>
+								
+								<div class="friend-name">
+								
+									<span>Published: </span>
+								</div>
+
+								<div class="post-meta">
+
+									<div class="description">
+										<p>
+											asfsafasfas
+										</p>
+									</div>						
+										<img src="image.jpg">							
+								</div>
+							</div>	
+					
+									
+									<div class="post-comt-box">
+									<div class="comet-avatar">
+										<img src="image.jpg" style="width: 45px;"> 
+									</div>
+										<form method="post" onsubmit="return doPostComment(this)">
+											<input type="hidden" name="_id" value=" + data._id + ">
+											<textarea name="comment" placeholder="Post your comment"></textarea>
+											<button type="submit">Post</button>
+										</form>
+									</div>		
+				
+							</div>
+								
+							</div>
+							</div>
+                     <div class="loadMore" id="newsfeed">
+								<div class="central-meta item">
+						<div class="user-post">
+							<div class="friend-info" >
+								<figure>
+									<img src="image.jpg" style="width: 45px" > 
+								</figure>
+								
+								<i class="fa fa-edit hello" style="font-size:24px" ></i>
+					
+								<i class="fa fa-trash hello1" style="font-size:24px"></i>
+								
+								<div class="friend-name">
+								
+									<span>Published: </span>
+								</div>
+
+								<div class="post-meta">
+
+									<div class="description">
+										<p>
+											asfsafasfas
+										</p>
+									</div>						
+										<img src="image.jpg">							
+								</div>
+							</div>	
+					
+									
+									<div class="post-comt-box">
+									<div class="comet-avatar">
+										<img src="image.jpg" style="width: 45px;"> 
+									</div>
+										<form method="post" onsubmit="return doPostComment(this)">
+											<input type="hidden" name="_id" value=" + data._id + ">
+											<textarea name="comment" placeholder="Post your comment"></textarea>
+											<button type="submit">Post</button>
+										</form>
+									</div>		
+				
+							</div>
+								
+							</div>
+							</div>
+						</div>
+					</div>
+								</div>
+							</div>
+						
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	</section>
+	
+</body>
+<style>	
+
+.fileContainer {
+        font-size: 10px;
+    }
+.central-meta {
+    background: #fdfdfd none repeat scroll 0 0;
+    border: 1px solid #ede9e9;
+    border-radius: 3px;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 25px;
+}	
+.central-meta button.btn-view {
+    background: #f1f1f1;
+}
+.friend-info {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+.friend-info > figure {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: middle;
+    width: 8%;
+}
+.newpst-input {
+    display: inline-block;
+    margin-left: 10px;
+    vertical-align: top;
+    width: 85.5%;
+}
+
+.newpst-input > form {
+    display: inline-block;
+    width: 100%;
+}
+.newpst-input textarea {
+    float: left;
+    width: 100%;
+}
+	
+
+.friend-info {
+    display: inline-block;
+    position: relative;
+    width: 100%;
+}
+
+.newpst-input textarea {
+    float: left;
+    width: 100%;
+}
+.attachments {
+    border: 1px solid #eee;
+    display: block;
+    padding: 10px;
+    text-align: right;
+    border-top: 0;
+    background: #fff;
+}
+
+.attachments > ul {
+    list-style: outside none none;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.attachments li {
+    display: inline-block;
+    margin-left: 5px;
+}
+textarea {
+    border: 1px solid #eeeeee;
+    border-radius: 6px 6px 0 0;
+    padding: 10px;
+    width: 100%;
+    border-bottom: 0;
+}
+form button {
+    border: medium none;
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 3px 10px;
+}
+
+.attachments .fileContainer [type="file"] {
+    right: 6px;
+    top: -18px;
+    width: 20px;
+}
+.central-meta {
+        background: #fdfdfd none repeat scroll 0 0;
+        border: 1px solid #ede9e9;
+        border-radius: 3px;
+        display: inline-block;
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 25px;
+    }
+
+.new-postbox {
+    display: inline-block;
+    width: 100%;
+}
+
+.new-postbox > figure {
+    display: inline-block;
+    margin-bottom: 0;
+    vertical-align: top;
+    width: 10.4%;
+}
+ #post-video-preview {
+        height: 300px;
+        width: 300px;
+        object-fit: cover;
+    }
+.fileContainer {
+    color: #d8d8d8;
+    font-size: 11px;
+    margin: 0 0 0 5px;
+    position: relative;
+    text-transform: capitalize;
+}
+.post-meta {
+    float: left;
+    margin-top: 15px;
+    width: 100%;
+}
+
+.post-meta > img {
+    float: left;
+    width: 100%;
+}
+.fileContainer [type=file] {
+    cursor: pointer;
+    display: block;
+    filter: alpha(opacity=0);
+    opacity: 0;
+    position: absolute;
+    right: 0px;
+    text-align: right;
+    top: 0;
+    width: 100%;
+    overflow: hidden;
+}
+
+.edit-phto .fileContainer [type="file"] {
+    height: 35px;
+    top: -11px;
+    width: 126px;
+}
+.hello{
+text-align: right;
+float:right
+}
+.hello1{
+text-align: right;
+float:right
+}
+
+
+
+	
+</style>
+ </html>
+
+
+
+      <div class="container-fluid pb-0">
+         <div class="video-block section-padding">
+            <div class="row" id="videos-section">
+               <% if (isLogina) { %>
+               <span> <%= idSV %> </span>
+               <% } else { %>
+               <span> <%=  id %> </span>
+               <% } %>
+               
+
+            </div>
+         </div>
+      </div>
+      <!-- /.container-fluid -->
+
+
